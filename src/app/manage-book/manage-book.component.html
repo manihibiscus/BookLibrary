@@ -1,2 +1,24 @@
 <app-header></app-header>
-<p>manage-book works!</p>
+<h2 style="font-weight: bolder;">
+  Book Details
+</h2>
+<form>
+<table>
+  <thead>
+    <th>Id</th>
+    <th>Book Name</th>
+    <th>Description</th>
+    <th>Manage Details</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of getBookDetails">
+      <td>{{item.id}}</td>
+      <td>{{item.bookName}}</td>
+      <td><a href="">ViewDetails</a></td>
+      <td><button (click)="delete(item.id)">Delete</button> <button (click)="edit(item)">Edit</button></td>
+      <!-- <td> </td> -->
+    </tr>
+  </tbody>
+ </table>
+</form>
+ 

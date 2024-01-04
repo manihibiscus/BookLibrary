@@ -12,4 +12,15 @@ export class BookDetailsService {
    getBookDetails(){
     return this.http.get("http://localhost:3000/bookDetails")
    }
+   postBookDetails(body:any)
+   {
+    return this.http.post("http://localhost:3000/bookDetails", body);
+   }
+   deleteDetails(id:any)
+   {
+    return this.http.delete("http://localhost:3000/bookDetails/"+id);
+   }
+   editDetails(data:any){
+    return this.http.patch("http://localhost:3000/bookDetails",data)
+   }
 }

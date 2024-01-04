@@ -1,30 +1,32 @@
 {
-  "bookDetails":[
+  "bookDetails": [
     {
-      "id":"1",
-      "name":"Core Java",
-      "description":"It is a part of the Java programming language that one can use for developing or creating a general-purpose app. Its main focus is to build such general applications. The J2SE (Java Standard Edition) is known as Core Java. It mainly covers concepts of object-oriented programming (OOP)."
-    },
-
-    {
-      "id":"2",
-      "name":"Angular",
-      "description":"Intermediate"
+      "id": "1",
+      "bookName": "Core Java",
+      "authorName": "Arul Prasanth",
+      "level": "Beginner",
+      "cost": "₹200"
     },
     {
-      "id":"3",
-      "name":"Hibernate",
-      "description":"Advance"
+      "id": "2",
+      "bookName": "Angular",
+      "authorName": "Murugeshan",
+      "level": "Intermediate",
+      "cost": "₹100"
     },
     {
-      "id":"4",
-      "name":"TypeScript",
-      "description":"Beginner"
+      "id": "3",
+      "bookName": "Hibernate",
+      "authorName": "Ramesh",
+      "level": "Advance",
+      "cost": "₹120"
     },
     {
-      "id":"5",
-      "name":"Data Science",
-      "description":"Beginner"
+      "id": "4",
+      "bookName": "TypeScript",
+      "authorName": "Manimaaran",
+      "level": "Beginner",
+      "cost": "₹230"
     }
   ]
 }

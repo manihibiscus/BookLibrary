@@ -1,2 +1,31 @@
 <app-header></app-header>
-<p>add-book works!</p>
+<div class="form">
+<form [formGroup]="addBookForm" (ngSubmit)="submitForm()">
+  <h2 style="text-align: left;">Add Book</h2>
+  <div class="field">
+    <label for="bookName">Book Name</label><br>
+    <input type="text" formControlName="bookName" placeholder="Enter Book Name">
+  </div>
+  <div class="field">
+    <label for="authorName">Author Name</label><br>
+    <input type="text" formControlName="authorName" placeholder="Enter Author Name">
+  </div>
+ <div class="field">
+      <label for="level">Level</label><br>
+      <select name="level" formControlName="level">
+        <option value="" disabled selected>Select the Level</option>
+        <option value="economy">Beginner</option>
+        <option value="business">Intermediate</option>
+        <option value="firstclass">Advance</option>
+      </select>
+      </div>
+  <div class="field">
+    <label for="bookCost">Book Cost</label><br>
+    <input type="text" formControlName="bookCost">
+  </div>
+    <div class="field">
+      <button type="submit" class="submit">Submit</button>
+    </div>
+  </form>
+
+</div>
