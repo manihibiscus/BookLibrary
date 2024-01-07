@@ -7,18 +7,37 @@
   <thead>
     <th>Id</th>
     <th>Book Name</th>
-    <th>Description</th>
     <th>Manage Details</th>
   </thead>
   <tbody>
     <tr *ngFor="let item of getBookDetails">
       <td>{{item.id}}</td>
       <td>{{item.bookName}}</td>
-      <td><a href="">ViewDetails</a></td>
-      <td><button (click)="delete(item.id)">Delete</button> <button (click)="edit(item)">Edit</button></td>
+      <td><button (click)="delete(item.id)">Delete</button> <button (click)="edit(item,$event)">Edit</button></td>
       <!-- <td> </td> -->
     </tr>
   </tbody>
  </table>
 </form>
- 
+<form [formGroup]="editForm" (ngSubmit)="update()" *ngIf="editFormHidden">
+  <h2 style="text-align: left;">Edit Book</h2>
+  <div class="field">
+    <label for="updateBookName">Book Name</label><br>
+    <input type="text" formControlName="updateBookName" placeholder="Enter Book Name">
+  </div>
+  <div class="field">
+    <label for="updateAuthorName">Author Name</label><br>
+    <input type="text" formControlName="updateAuthorName" placeholder="Enter Author Name">
+  </div>
+  <div class="field">
+    <label for="updateLevel">Level</label><br>
+    <input type="text" formControlName="updateLevel" placeholder="Enter the Level">
+  </div>
+  <div class="field">
+    <label for="updateBookCost">Book Cost</label><br>
+    <input type="text" formControlName="updateBookCost">
+  </div>
+    <div class="field">
+      <button type="submit" class="submit">Update</button>
+    </div>
+  </form>

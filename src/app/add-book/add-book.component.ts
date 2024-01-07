@@ -16,7 +16,7 @@ addBookForm=this.fb.group({
   bookName:["",Validators.required],
   authorName:["",Validators.required],
   level:["",Validators.required],
-  bookCost:["₹",Validators.required],
+  bookCost:["₹",Validators.required]
 });
 getDetails:any=""
 submitForm(){

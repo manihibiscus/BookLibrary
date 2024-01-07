@@ -20,7 +20,7 @@ export class BookDetailsService {
    {
     return this.http.delete("http://localhost:3000/bookDetails/"+id);
    }
-   editDetails(data:any){
-    return this.http.patch("http://localhost:3000/bookDetails",data)
+   editDetails(id:any, data:any){
+    return this.http.patch("http://localhost:3000/bookDetails/"+id,data)
    }
 }

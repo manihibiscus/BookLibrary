@@ -1,32 +1,18 @@
 {
   "bookDetails": [
     {
-      "id": "1",
-      "bookName": "Core Java",
-      "authorName": "Arul Prasanth",
-      "level": "Beginner",
-      "cost": "₹200"
-    },
-    {
-      "id": "2",
-      "bookName": "Angular",
-      "authorName": "Murugeshan",
-      "level": "Intermediate",
-      "cost": "₹100"
-    },
-    {
       "id": "3",
-      "bookName": "Hibernate",
+      "bookName": "Hibe",
       "authorName": "Ramesh",
-      "level": "Advance",
-      "cost": "₹120"
+      "level": "Adv",
+      "bookCost": "₹120"
     },
     {
       "id": "4",
       "bookName": "TypeScript",
       "authorName": "Manimaaran",
       "level": "Beginner",
-      "cost": "₹230"
+      "bookCost": "₹23"
     }
   ]
 }
