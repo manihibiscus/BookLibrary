@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
 import {  FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { BookDetailsService } from '../book-details.service';
 import { CommonModule } from '@angular/common';
 import { AddBookComponent } from '../add-book/add-book.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-manage-book',
@@ -12,9 +13,12 @@ import { AddBookComponent } from '../add-book/add-book.component';
   templateUrl: './manage-book.component.html',
   styleUrl: './manage-book.component.css'
 })
-export class ManageBookComponent {
+export class ManageBookComponent implements OnInit{
   getBookDetails:any=""
   constructor(private service:BookDetailsService, private fb:FormBuilder){
+
+  }
+  ngOnInit(): void {
     this.service.getBookDetails().subscribe(data=>{
       this.getBookDetails=data
     });
@@ -28,9 +32,16 @@ export class ManageBookComponent {
 
 
   delete(id:any){
-    this.service.deleteDetails(id).subscribe(data=>{
-      alert("Deleted Successfully");
-    })
+    var message="Are you sure want to delete this book?";
+    if(confirm(message)==true){
+      this.service.deleteDetails(id).subscribe(data=>{
+        this.ngOnInit();
+      });
+
+    }
+    else{
+      message = "You canceled!"
+    }
   }
   updatingData:any="";
   editFormHidden:boolean=false;
@@ -52,8 +63,12 @@ export class ManageBookComponent {
     }
     this.service.editDetails(this.updatingData.id, body).subscribe(value=>{
       alert("Content Edited");
-    })
+      this.ngOnInit();
+      this.editFormHidden=false
+    });
   }
-
+back(){
+  this.editFormHidden=false;
+}
 
 }

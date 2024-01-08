@@ -7,20 +7,27 @@
   <thead>
     <th>Id</th>
     <th>Book Name</th>
+    <th>Author Name</th>
+    <th>Level</th>
+    <th>Cost</th>
     <th>Manage Details</th>
+
   </thead>
   <tbody>
     <tr *ngFor="let item of getBookDetails">
       <td>{{item.id}}</td>
       <td>{{item.bookName}}</td>
-      <td><button (click)="delete(item.id)">Delete</button> <button (click)="edit(item,$event)">Edit</button></td>
+      <td>{{item.authorName}}</td>
+      <td>{{item.level}}</td>
+      <td>{{item.bookCost}}</td>
+      <td><button class="button" (click)="delete(item.id); $event.preventDefault()">Delete</button> <button class="button" (click)="edit(item,$event)">Edit</button></td>
       <!-- <td> </td> -->
     </tr>
   </tbody>
  </table>
 </form>
-<form [formGroup]="editForm" (ngSubmit)="update()" *ngIf="editFormHidden">
-  <h2 style="text-align: left;">Edit Book</h2>
+<dialog class="editStyle" [formGroup]="editForm" [open]="editFormHidden">
+  <h2 style="text-align: center;">Edit Book</h2>
   <div class="field">
     <label for="updateBookName">Book Name</label><br>
     <input type="text" formControlName="updateBookName" placeholder="Enter Book Name">
@@ -38,6 +45,7 @@
     <input type="text" formControlName="updateBookCost">
   </div>
     <div class="field">
-      <button type="submit" class="submit">Update</button>
+      <button type="submit" class="Update" (click)="update()">Update</button>
+      <button type="submit" class="Back" (click)="back()">Back</button>
     </div>
-  </form>
+</dialog>

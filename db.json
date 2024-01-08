@@ -2,9 +2,9 @@
   "bookDetails": [
     {
       "id": "3",
-      "bookName": "Hibe",
+      "bookName": "Hibernate",
       "authorName": "Ramesh",
-      "level": "Adv",
+      "level": "Advance",
       "bookCost": "₹120"
     },
     {
@@ -12,7 +12,21 @@
       "bookName": "TypeScript",
       "authorName": "Manimaaran",
       "level": "Beginner",
-      "bookCost": "₹23"
+      "bookCost": "150"
+    },
+    {
+      "id": "5",
+      "bookName": "JavaScript",
+      "authorName": "Suntharam",
+      "level": "Advance",
+      "bookCost": "₹300"
+    },
+    {
+      "id": "6",
+      "bookName": "JavaScript",
+      "authorName": "Suntharam",
+      "level": "Advance",
+      "bookCost": "₹300"
     }
   ]
 }

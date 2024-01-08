@@ -19,3 +19,66 @@ table thead th{
   padding: 12px;
 
 }
+
+label{
+  font-size: 18px;
+  font-weight: bolder;
+}
+select{
+  width: 28%;
+  height: 35px;
+  font-size: 20px;
+}
+select option{
+  width: 28%;
+  height: 35px;
+  font-size: 20px;
+}
+input[type=text],input[type=number]{
+  width: 50%;
+  height: 35px;
+  font-size: 20px;
+}
+input[type=date]{
+  width: 28%;
+  height: 35px;
+  font-size: 20px;
+}
+.field{
+  margin-top: 15px;
+}
+.Update{
+padding: 10px;
+font-size: 18px;
+font-weight: bolder;
+color: white;
+border-radius: 5px;
+background-color: #2d2d32;
+float: left;
+}
+.Back{
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bolder;
+  color: white;
+  border-radius: 5px;
+  background-color: #2d2d32;
+  float: right;
+  }
+
+.editStyle{
+  margin-left: 42%;
+  margin-top: -18%;
+  width: 500px;
+  border-radius: 10px;
+}
+
+.button{
+padding: 10px;
+font-size: 14px;
+font-weight: bolder;
+color: white;
+border-radius: 5px;
+background-color: #2d2d32;
+margin-left: 10px;
+}
