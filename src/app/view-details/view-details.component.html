@@ -1,16 +1,19 @@
 <form>
-  <div *ngFor="let item of getData">
+  <h2>View {{getData.bookName}} Book Details</h2>
   <div class="field">
-    <label>Book Name: </label><br>
-    <p>{{item.bookName}}</p>
+    <p>Book Name: <span>{{getData.bookName}}</span></p>
   </div>
   <div class="field">
-    <label>Book Author: </label><br>
-    <p>{{item.bookName}}</p>
+    <p>Book Author: <span>{{getData.authorName}}</span> </p>
   </div>
   <div class="field">
-    <label>Book Name: </label><br>
-    <p>{{item.bookName}}</p>
+    <p>Level: <span>{{getData.level}}</span></p>
   </div>
-</div>
+  <div class="field">
+    <p>Book Cost: <span>{{getData.bookCost}}</span></p>
+  </div>
+  <div>
+    <a routerLink="/home">Go Back to Home Page</a>
+  </div>
+
 </form>

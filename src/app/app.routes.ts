@@ -19,7 +19,7 @@ export const routes: Routes = [
     component:ManageBookComponent
   },
   {
-    path:"View",
+    path:"View/:id",
     component:ViewDetailsComponent
   }
 

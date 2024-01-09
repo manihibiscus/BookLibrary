@@ -23,4 +23,7 @@ export class BookDetailsService {
    editDetails(id:any, data:any){
     return this.http.patch("http://localhost:3000/bookDetails/"+id,data)
    }
+   getViewBook(id:any){
+    return this.http.get("http://localhost:3000/bookDetails/"+id);
+   }
 }
